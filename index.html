@@ -41,15 +41,15 @@
 			<div class="slides">
 				<section>
 					<h1 style="text-transform: uppercase;">
-						<!-- <img src="img/scream.png" style="opacity: 0.9; border: none; box-shadow: none; position: relative; top: 25px;" height="50px"> -->
+						<!-- <img src="img/scream.png" style="opacity: 0.9; box-shadow: none; position: relative; top: 25px;" height="50px"> -->
 						ES6 Ghosts
-						<img src="img/ghost.png" style="opacity: 0.6; border: none; box-shadow: none; position: relative; top: 25px; left: -10px;" height="50px">
+						<img src="img/ghost.png" style="opacity: 0.6; box-shadow: none; position: relative; top: 25px; left: -10px;" height="50px">
 					</h1>
 					<p style="opacity: 0.8;">
 						<!-- Don't look back in anger -->
 						&nbsp;
-						<!-- <img src="img/notes.png" style="opacity: 0.5; border: none; box-shadow: none; position: relative; top: 25px;" height="50px"> -->
-						<img src="img/scream.png" style="opacity: 0.8; border: none; box-shadow: none; position: relative; top: 25px;" height="50px">
+						<!-- <img src="img/notes.png" style="opacity: 0.5; box-shadow: none; position: relative; top: 25px;" height="50px"> -->
+						<img src="img/scream.png" style="opacity: 0.8; box-shadow: none; position: relative; top: 25px;" height="50px">
 					</p>
 					<br>
 					<br>
@@ -61,8 +61,8 @@
 				<section>
 					<section>
 						<h2>A little bit of history</h2>
-						<img src="img/mountain_view.jpg" height="400px;" style="border: none;" class="fragment">
-						<img src="img/brendan.png" height="400px;" style="border: none;" class="fragment">
+						<img src="img/mountain_view.jpg" height="400px;" class="fragment">
+						<img src="img/brendan.png" height="400px;" class="fragment">
 					</section>
 					<section>
 						<img src="img/two_weeks_later.png">
@@ -82,7 +82,7 @@
 				<section>
 					<section>
 						<h2><code>let</code> and <code>const</code></h2>
-						<img src="img/paint.png" style="border: none; box-shadow: none;" height="100px">
+						<img src="img/paint.png" style="box-shadow: none;" height="100px">
 					</section>
 
 					<section>
@@ -168,7 +168,7 @@ x = {
 				<section>
 					<section>
 						<h2>Arrow functions</h2>
-						<img src="img/arrow.png" style="border: none; box-shadow: none;" height="100px">
+						<img src="img/arrow.png" style="box-shadow: none;" height="100px">
 					</section>
 
 					<section>
@@ -212,7 +212,7 @@ function Person() {
 					</section>
 
 					<section>
-						<h3>Lexical scope <img src="img/heart_arrow.png" style="border: none; box-shadow: none; position: relative; top: 25px;" height="50px"></h3>
+						<h3>Lexical scope <img src="img/heart_arrow.png" style="box-shadow: none; position: relative; top: 25px;" height="50px"></h3>
 						<pre><code class="hljs" data-trim contenteditable>
 function Person(){
   this.age = 0;
@@ -228,7 +228,7 @@ function Person(){
 				<section>
 					<section>
 						<h2><code>class</code> keyword</h2>
-						<img src="img/cake.png" style="border: none; box-shadow: none;" height="100px">
+						<img src="img/cake.png" style="box-shadow: none;" height="100px">
 					</section>
 
 					<section>
@@ -247,7 +247,7 @@ Person.prototype.incrementAge = function () {
 					</section>
 
 					<section>
-						<h3>Psudo-classical inheritance with <img src="img/cake.png" style="border: none; box-shadow: none; position: relative; top: 25px;" height="50px"></h3>
+						<h3>Psudo-classical inheritance with <img src="img/cake.png" style="box-shadow: none; position: relative; top: 25px;" height="50px"></h3>
 						<pre><code class="hljs" data-trim contenteditable>
 class Person {
   constructor(name, age, gender) {
@@ -283,7 +283,7 @@ Personal.prototype.incrementAge = function () {
 					</section>
 
 					<section>
-						<h3>Psudo-classical inheritance (subclass) with <img src="img/cake.png" style="border: none; box-shadow: none; position: relative; top: 25px;" height="50px"></h3>
+						<h3>Psudo-classical inheritance (subclass) with <img src="img/cake.png" style="box-shadow: none; position: relative; top: 25px;" height="50px"></h3>
 						<pre><code class="hljs" data-trim contenteditable>
 class Personal extends Person {
   constructor(name, age, gender, occupation, hobby) {
@@ -305,7 +305,7 @@ class Personal extends Person {
 				<section>
 					<section>
 						<h2>Generators</h2>
-						<img src="img/tada.png" style="border: none; box-shadow: none;" height="100px">
+						<img src="img/tada.png" style="box-shadow: none;" height="100px">
 					</section>
 
 					<section>
@@ -434,7 +434,7 @@ app.use(function *(next){
 				<section>
 					<section>
 						<h2>Default parameters</h2>
-						<img src="img/stars.png" style="border: none; box-shadow: none;" height="100px">
+						<img src="img/stars.png" style="box-shadow: none;" height="100px">
 					</section>
 
 					<section>
@@ -480,7 +480,7 @@ function initializeCanvas({ height=600, width=400}) {
 					</section>
 
 					<section>
-						<h3>Rest operator gives us a real array! <img src="img/stars.png" style="border: none; box-shadow: none; position: relative; top: 25px;" height="50px"></h3>
+						<h3>Rest operator gives us a real array! <img src="img/stars.png" style="box-shadow: none; position: relative; top: 25px;" height="50px"></h3>
 						<pre><code class="hljs" data-trim contenteditable>
 // ES5
 function logArguments() {
@@ -502,9 +502,9 @@ function logArguments(...args) {
 				<section>
 					<section>
 						<h2>Destructuring Assignment</h2>
-						<img src="img/fish_cake.png" style="border: none; box-shadow: none;" height="50px">
-						<img src="img/fish_cake.png" style="border: none; box-shadow: none;" height="50px">
-						<img src="img/fish_cake.png" style="border: none; box-shadow: none;" height="50px">
+						<img src="img/fish_cake.png" style="box-shadow: none;" height="50px">
+						<img src="img/fish_cake.png" style="box-shadow: none;" height="50px">
+						<img src="img/fish_cake.png" style="box-shadow: none;" height="50px">
 					</section>
 
 					<section>
@@ -590,15 +590,15 @@ console.log(b); // 3
 			</section>
 
 			<section>
-				<h2>Questions <img src="img/question.png" style="opacity: 0.5; border: none; box-shadow: none; position: relative; top: 25px; left: -20px;" height="85x"></h2>
+				<h2>Questions <img src="img/question.png" style="opacity: 0.5; box-shadow: none; position: relative; top: 25px; left: -20px;" height="85x"></h2>
 			</section>
 
 			<section>
 				<h2>Thank you!</h2>
-				<img src="img/beers.png" style="border: none; box-shadow: none;" height="100px">
+				<img src="img/beers.png" style="box-shadow: none;" height="100px">
 				<br>
 				<br>
-				<img src="img/github.png" style="border: none; box-shadow: none; position: relative; top: 27px;" height="50px">
+				<img src="img/github.png" style="box-shadow: none; position: relative; top: 27px;" height="50px">
 				<a href="https://github.com/sirodoht/es6-talk">/sirodoht/es6-talk</a>
 			</section>
 
