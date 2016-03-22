@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -38,342 +38,569 @@
 
 		<div class="reveal">
 
-			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>The HTML Presentation Framework</h3>
+					<h1 style="text-transform: uppercase;">
+						<!-- <img src="img/scream.png" style="opacity: 0.9; border: none; box-shadow: none; position: relative; top: 25px;" height="50px"> -->
+						ES6 Ghosts
+						<img src="img/ghost.png" style="opacity: 0.6; border: none; box-shadow: none; position: relative; top: 25px; left: -10px;" height="50px">
+					</h1>
+					<p style="opacity: 0.8;">
+						<!-- Don't look back in anger -->
+						&nbsp;
+						<!-- <img src="img/notes.png" style="opacity: 0.5; border: none; box-shadow: none; position: relative; top: 25px;" height="50px"> -->
+						<img src="img/scream.png" style="opacity: 0.8; border: none; box-shadow: none; position: relative; top: 25px;" height="50px">
+					</p>
+					<br>
+					<br>
 					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
+						<small style="opacity: 0.8;"><a href="https://twitter.com/sirodoht">@sirodoht</a> / Node.js Meetup Thessaloniki</small>
 					</p>
 				</section>
 
-				<section>
-					<h2>Hello There</h2>
-					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
-				</section>
-
-				<!-- Example of nested vertical slides -->
 				<section>
 					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
+						<h2>A little bit of history</h2>
+						<img src="img/mountain_view.jpg" height="400px;" style="border: none;" class="fragment">
+						<img src="img/brendan.png" height="400px;" style="border: none;" class="fragment">
 					</section>
 					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
+						<img src="img/two_weeks_later.png">
 					</section>
 					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						<br>
-						<a href="#/2">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
-
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
-
-				<section>
-					<h2>Touch Optimized</h2>
-					<p>
-						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-					</p>
-				</section>
-
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
-
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
-
-				<section>
-					<section id="fragments">
-						<h2>Fragments</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
-
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
+						<img src="img/js.jpg" style="height: 50vh;">
 					</section>
 					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's different types of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
+						<img src="img/javascript-wat.jpg">
 					</section>
-				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=slide#/transitions">Slide</a> -
-						<a href="?transition=convex#/transitions">Convex</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						reveal.js comes with a few themes built in: <br>
-						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-					</p>
 				</section>
 
 				<section>
-					<section data-background="#dddddd">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code class="hljs">&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Tiled Backgrounds</h2>
-						<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-							<h2>Video Backgrounds</h2>
-							<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-						</div>
-					</section>
-					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
-						<h2>... and GIFs!</h2>
-					</section>
-				</section>
-
-				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-					</p>
-					<pre><code class="hljs">Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-				</section>
-
-				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						You can override background transitions per-slide.
-					</p>
-					<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
+					<img src="img/es6.jpg" style="height: 50vh;">
 				</section>
 
 				<section>
-					<h2>Pretty Code</h2>
-					<pre><code class="hljs" data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
+					<section>
+						<h2><code>let</code> and <code>const</code></h2>
+						<img src="img/paint.png" style="border: none; box-shadow: none;" height="100px">
+					</section>
 
-    var nodes = document.querySelectorAll( selector );
+					<section>
+						<h3>Block scope in C</h3>
+						<pre><code class="hljs" data-trim contenteditable>
+int main(void) {
+	int x = 3;
+	{
+		int y = 5;
+	}
+	x = y;  // error: use of undeclared identifier 'y'
+}
+						</code></pre>
+					</section>
 
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
+					<section>
+						<h3>Function scope in JS</h3>
+						<pre><code class="hljs" data-trim contenteditable>
+function func() {
+  {
+    var x = 1;
+  	if (x === 1) {
+			var y = 2;
+		}
+		console.log(y);  // 2
 
-      if( !node.className ) {
-        node.className += ' roll';
-      }
+		var x = 2;  // no error, even though already declared
+  }
+}
+console.log(x);  // ReferenceError: x is not defined
+						</code></pre>
+					</section>
+
+					<section>
+						<h3>Block scope in JS</h3>
+						<pre><code class="hljs" data-trim contenteditable>
+function func() {
+  {
+    let x;
+    {
+      let y = 1;
+    }
+    let x = "inner";  // error, already declared in block
+
+    console.log(y);  // ReferenceError: y is not defined
+  }
+}
+console.log(x);
+						</code></pre>
+					</section>
+
+					<section>
+						<h3>Immutable variables</h3>
+						<pre><code class="hljs" data-trim contenteditable>
+function func() {
+  {
+    const x = "sneaky";
+    x = "foo";  // TypeError: Assignment to constant variable.
+  }
+}
+						</code></pre>
+					</section>
+
+					<section>
+						<h3>Only the variable binding is immutable, not the content!</h3>
+						<pre><code class="hljs" data-trim contenteditable>
+const x = {
+  one: 2,
+  three: 4
+};
+
+x.five = "seven";  // no problem!
+
+x.eight = 9;  // same
+
+x = {
+	five: "six"
+};  // TypeError: Assignment to constant variable.
+						</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Arrow functions</h2>
+						<img src="img/arrow.png" style="border: none; box-shadow: none;" height="100px">
+					</section>
+
+					<section>
+						<h3>Less verbose anonymous functions</h3>
+						<pre><code class="hljs" data-trim contenteditable>
+// # ES5
+[1, 2, 3].map(function(n) {
+  return n * 2;
+}, this);
+// -> [ 2, 4, 6 ]
+
+// # ES6
+[1, 2, 3].map(n => n * 2);
+// -> [ 2, 4, 6 ]
+						</code></pre>
+					</section>
+
+					<section>
+						<h3>More than one parameters</h3>
+						<pre><code class="hljs" data-trim contenteditable>
+[1, 2, 3].map((n, index) => {
+  const result = n * index;
+  return result;
+});
+// -> [ 0, 2, 6 ]
+						</code></pre>
+					</section>
+
+					<section>
+						<h3>Dynamic scope</h3>
+						<pre><code class="hljs" data-trim contenteditable>
+function Person() {
+  var self = this;
+  self.age = 0;
+
+  setInterval(function growUp() {
+    self.age++;
+  }, 1000);
+}
+						</code></pre>
+					</section>
+
+					<section>
+						<h3>Lexical scope <img src="img/heart_arrow.png" style="border: none; box-shadow: none; position: relative; top: 25px;" height="50px"></h3>
+						<pre><code class="hljs" data-trim contenteditable>
+function Person(){
+  this.age = 0;
+
+  setInterval(() => {
+    this.age++; // |this| properly refers to the person object
+  }, 1000);
+}
+						</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2><code>class</code> keyword</h2>
+						<img src="img/cake.png" style="border: none; box-shadow: none;" height="100px">
+					</section>
+
+					<section>
+						<h3>Psudo-classical inheritance</h3>
+						<pre><code class="hljs" data-trim contenteditable>
+function Person(name, age, gender) {
+  this.name = name;
+  this.age = age;
+  this.gender = gender;
+}
+
+Person.prototype.incrementAge = function () {
+  return this.age += 1;
+};
+						</code></pre>
+					</section>
+
+					<section>
+						<h3>Psudo-classical inheritance with <img src="img/cake.png" style="border: none; box-shadow: none; position: relative; top: 25px;" height="50px"></h3>
+						<pre><code class="hljs" data-trim contenteditable>
+class Person {
+  constructor(name, age, gender) {
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+  }
+
+	incrementAge() {
+  	this.age += 1;
+  }
+}
+						</code></pre>
+					</section>
+
+					<section>
+						<h3>Psudo-classical inheritance (subclass)</h3>
+						<pre><code class="hljs" data-trim contenteditable>
+function Personal(name, age, gender, occupation, hobby) {
+  Person.call(this, name, age, gender);
+  this.occupation = occupation;
+  this.hobby = hobby;
+}
+
+Personal.prototype = Object.create(Person.prototype);
+Personal.prototype.constructor = Personal;
+Personal.prototype.incrementAge = function () {
+  Person.prototype.incrementAge.call(this);
+  this.age += 20;
+  console.log(this.age);
+};
+						</code></pre>
+					</section>
+
+					<section>
+						<h3>Psudo-classical inheritance (subclass) with <img src="img/cake.png" style="border: none; box-shadow: none; position: relative; top: 25px;" height="50px"></h3>
+						<pre><code class="hljs" data-trim contenteditable>
+class Personal extends Person {
+  constructor(name, age, gender, occupation, hobby) {
+    super(name, age, gender);
+    this.occupation = occupation;
+    this.hobby = hobby;
+  }
+
+  incrementAge() {
+    super.incrementAge();
+    this.age += 20;
+    console.log(this.age);
+  }
+}
+						</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Generators</h2>
+						<img src="img/tada.png" style="border: none; box-shadow: none;" height="100px">
+					</section>
+
+					<section>
+						<h3>In the simplest form</h3>
+						<pre><code class="hljs" data-trim contenteditable>
+function* sillyGenerator() {
+  yield 1;
+  yield 2;
+  yield 3;
+  yield 4;
+}
+
+var generator = sillyGenerator();
+console.log(generator.next()); // { value: 1, done: false }
+console.log(generator.next()); // { value: 2, done: false }
+console.log(generator.next()); // { value: 3, done: false }
+console.log(generator.next()); // { value: 4, done: false }
+console.log(generator.next()); // { value: undefined, done: true }
+						</code></pre>
+					</section>
+
+					<section>
+						<h3>Infinite generator</h3>
+						<pre><code class="hljs" data-trim contenteditable>
+function* idMaker(){
+  var index = 0;
+  while (true) {
+    yield index++;
+  }
+}
+
+var gen = idMaker();
+
+console.log(gen.next().value);  // 0
+console.log(gen.next().value);  // 1
+console.log(gen.next().value);  // 2
+						</code></pre>
+					</section>
+
+					<section>
+						<h3>Fibonacci !</h3>
+						<pre><code class="hljs" data-trim contenteditable>
+function* fibonacci(){
+  var fn1 = 0;
+  var fn2 = 1;
+  while (true){
+    var current = fn1;
+    fn1 = fn2;
+    fn2 = current + fn1;
+    var reset = yield current;
+    if (reset){
+      fn1 = 0;
+      fn2 = 1;
     }
   }
 }
-					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+
+var sequence = fibonacci();
+console.log(sequence.next().value);  // 0
+console.log(sequence.next().value);  // 1
+console.log(sequence.next().value);  // 1
+console.log(sequence.next().value);  // 2
+console.log(sequence.next().value);  // 3
+console.log(sequence.next().value);  // 5
+console.log(sequence.next().value);  // 8
+console.log(sequence.next(true).value);  // 0
+console.log(sequence.next().value);  // 1
+console.log(sequence.next().value);  // 1
+console.log(sequence.next().value);  // 2
+						</code></pre>
+					</section>
+
+					<section>
+						<h3>Fibonacci with destructuring</h3>
+						<pre><code class="hljs" data-trim contenteditable>
+function* fibonacci() {
+  let [prev, curr] = [0, 1];
+  while (true) {
+    [prev, curr] = [curr, prev + curr];
+    yield curr;
+    let reset = yield current;
+    if (reset) {
+      [prev, curr] = [0, 1];
+  }
+}
+						</code></pre>
+					</section>
+					<section>
+						<h3>Fibonacci with destructuring - usage</h3>
+						<p>with spread operator</p>
+						<pre><code class="hljs" data-trim contenteditable>
+let [...first10] = fibonacci(10);
+console.log(first10);
+// [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+						</code></pre>
+						<div class="fragment">
+							<p>
+								OR with <code>for...of</code>
+							</p>
+							<pre><code class="hljs" data-trim contenteditable>
+for (let n of fibonacci()) {
+	console.log(n);
+	// truncate the sequence at 1000
+	if (n >= 1000) {
+		break;
+	}
+}
+							</code></pre>
+						</div>
+					</section>
+
+					<section>
+						<h3>Koa middleware</h3>
+						<pre><code class="hljs" data-trim contenteditable>
+app.use(function *(next){
+  var start = new Date;
+  yield next;
+  var ms = new Date - start;
+  this.set('X-Response-Time', ms + 'ms');
+});
+						</code></pre>
+					</section>
+
 				</section>
 
 				<section>
-					<h2>Marvelous List</h2>
+					<section>
+						<h2>Default parameters</h2>
+						<img src="img/stars.png" style="border: none; box-shadow: none;" height="100px">
+					</section>
+
+					<section>
+						<h3>Handling <code>undefined</code> variables</h3>
+						<pre><code class="hljs" data-trim contenteditable>
+// ES5
+function addTwoNumbers(x, y) {
+	x = x || 0;
+	y = y || 0;
+	return x + y;
+}
+
+// ES6
+function addTwoNumbers(x=0, y=0) {
+  return x + y;
+}
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Named Parameters</h2>
+					</section>
+
+					<section>
+						<h3>jQuery <code>options</code>-like behaviour</h3>
+						<pre><code class="hljs" data-trim contenteditable>
+// ES5
+function initializeCanvas(options) {
+	var height = options.height || 600;
+	var width = options.width || 400;
+	var lineStroke = options.lineStroke || 'black';
+}
+
+// ES6
+function initializeCanvas({ height=600, width=400}) {
+	// Use variables height, width here
+}
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Rest parameters</h2>
+					</section>
+
+					<section>
+						<h3>Rest operator gives us a real array! <img src="img/stars.png" style="border: none; box-shadow: none; position: relative; top: 25px;" height="50px"></h3>
+						<pre><code class="hljs" data-trim contenteditable>
+// ES5
+function logArguments() {
+  for (var i=0; i < arguments.length; i++) {
+    console.log(arguments[i]);
+  }
+}
+
+// ES6
+function logArguments(...args) {
+  for (let arg of args) {
+    console.log(arg);
+  }
+}
+						</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Destructuring Assignment</h2>
+						<img src="img/fish_cake.png" style="border: none; box-shadow: none;" height="50px">
+						<img src="img/fish_cake.png" style="border: none; box-shadow: none;" height="50px">
+						<img src="img/fish_cake.png" style="border: none; box-shadow: none;" height="50px">
+					</section>
+
+					<section>
+						<h3>Using Arrays</h3>
+						<pre><code class="hljs" data-trim contenteditable>
+var [a, b] = [1, 2];
+console.log(a); // 1
+console.log(b); // 2
+
+var foo = ["bar", "zoo", "moo"];
+var [one, two, three] = foo;
+console.log(one); // "bar"
+console.log(two); // "zoo"
+console.log(three); // "moo"
+						</code></pre>
+					</section>
+
+					<section>
+						<h3>Using the spread operator</h3>
+						<pre><code class="hljs" data-trim contenteditable>
+[a, b, ...rest] = [1, 2, 3, 4, 5];
+console.log(a); // 1
+console.log(b); // 2
+console.log(rest); // [3, 4, 5]
+						</code></pre>
+					</section>
+
+					<section>
+						<h3>Using Objects</h3>
+						<pre><code class="hljs" data-trim contenteditable>
+var {foo, bar} = {foo: 'lorem', bar: 'ipsum'};
+// foo => lorem and bar => ipsum
+						</code></pre>
+
+						<pre><code class="hljs" data-trim contenteditable>
+({a, b} = {a:1, b:2});
+console.log(a); // 1
+console.log(b); // 2
+						</code></pre>
+					</section>
+
+					<section>
+						<h3>Using functions and omitting arguments</h3>
+						<pre><code class="hljs" data-trim contenteditable>
+function f() {
+  return [1, 2, 3];
+}
+
+var [a, , b] = f();
+console.log(a); // 1
+console.log(b); // 3
+						</code></pre>
+					</section>
+				</section>
+
+			</section>
+
+			<section>
+				<section>
+					<h3>Talked about</h3>
 					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
+						<li>let and const</li>
+						<li>Arrow functions</li>
+						<li>class keyword</li>
+						<li>Generators</li>
+						<li>Default/Name/Rest Parameters</li>
+						<li>Destructuring Assignment and Spread Operator</li>
 					</ul>
 				</section>
 
 				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
-				<section>
-					<h2>Tabular Tables</h2>
-					<table>
-						<thead>
-							<tr>
-								<th>Item</th>
-								<th>Value</th>
-								<th>Quantity</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Apples</td>
-								<td>$1</td>
-								<td>7</td>
-							</tr>
-							<tr>
-								<td>Lemonade</td>
-								<td>$2</td>
-								<td>18</td>
-							</tr>
-							<tr>
-								<td>Bread</td>
-								<td>$3</td>
-								<td>2</td>
-							</tr>
-						</tbody>
-					</table>
-				</section>
-
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
-
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Speaker View</h2>
-					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-					<p>Press the <em>S</em> key to try it out.</p>
-
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
-
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-					<iframe src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-				</section>
-
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the page background.
-					</p>
-				</section>
-
-				<section data-state="customevent">
-					<h2>State Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-					</p>
-				</section>
-
-				<section>
-					<h2>Much more</h2>
+					<h3>There is more!</h3>
 					<ul>
-						<li>Right-to-left support</li>
-						<li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
+						<li>Promises</li>
+						<li>Modules</li>
+						<li>String templates</li>
+						<li>Sets (and WeakSets)</li>
+						<li>Maps (and WeakMaps)</li>
+						<li>Symbols (Iterators)</li>
+						<li>Reflection</li>
 					</ul>
 				</section>
+			</section>
 
-				<section style="text-align: left;">
-					<h1>THE END</h1>
-					<p>
-						- <a href="http://slides.com">Try the online editor</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-					</p>
-				</section>
+			<section>
+				<h2>Questions <img src="img/question.png" style="opacity: 0.5; border: none; box-shadow: none; position: relative; top: 25px; left: -20px;" height="85x"></h2>
+			</section>
+
+			<section>
+				<h2>Thank you!</h2>
+				<img src="img/beers.png" style="border: none; box-shadow: none;" height="100px">
+				<br>
+				<br>
+				<img src="img/github.png" style="border: none; box-shadow: none; position: relative; top: 27px;" height="50px">
+				<a href="https://github.com/sirodoht/es6-talk">/sirodoht/es6-talk</a>
+			</section>
 
 			</div>
 
