@@ -87,7 +87,7 @@
 					</section>
 
 					<section>
-						<h3>Block scope in C</h3>
+						<h3>Block scope variables in C</h3>
 						<pre><code class="hljs" data-trim contenteditable>
 int main(void) {
 	int x = 3;
@@ -100,7 +100,7 @@ int main(void) {
 					</section>
 
 					<section>
-						<h3>Function scope in JS</h3>
+						<h3>Function scope variables in JS</h3>
 						<pre><code class="hljs" data-trim contenteditable>
 function func() {
   {
@@ -118,7 +118,7 @@ console.log(x);  // ReferenceError: x is not defined
 					</section>
 
 					<section>
-						<h3>Block scope in JS</h3>
+						<h3>Block scope variables in JS</h3>
 						<pre><code class="hljs" data-trim contenteditable>
 function func() {
   {
@@ -173,7 +173,7 @@ x = {
 					</section>
 
 					<section>
-						<h3>Less verbose anonymous functions</h3>
+						<h3>Succinct anonymous functions</h3>
 						<pre><code class="hljs" data-trim contenteditable>
 // # ES5
 [1, 2, 3].map(function(n) {
@@ -199,7 +199,7 @@ x = {
 					</section>
 
 					<section>
-						<h3>Dynamic scope</h3>
+						<h3>Dynamic scope-ish <code>this</code></h3>
 						<pre><code class="hljs" data-trim contenteditable>
 function Person() {
   var self = this;
@@ -213,7 +213,7 @@ function Person() {
 					</section>
 
 					<section>
-						<h3>Lexical scope <img src="img/heart_arrow.png" style="box-shadow: none; position: relative; top: 25px;" height="50px"></h3>
+						<h3>Lexical scope <code>this</code><img src="img/heart_arrow.png" style="box-shadow: none; position: relative; top: 25px;" height="50px"></h3>
 						<pre><code class="hljs" data-trim contenteditable>
 function Person(){
   this.age = 0;
@@ -305,74 +305,6 @@ class Personal extends Person {
 
 				<section>
 					<section>
-						<h2>Default parameters</h2>
-						<img src="img/stars.png" style="box-shadow: none;" height="100px">
-					</section>
-
-					<section>
-						<h3>Handling <code>undefined</code> variables</h3>
-						<pre><code class="hljs" data-trim contenteditable>
-// ES5
-function addTwoNumbers(x, y) {
-	x = x || 0;
-	y = y || 0;
-	return x + y;
-}
-
-// ES6
-function addTwoNumbers(x=0, y=0) {
-  return x + y;
-}
-						</code></pre>
-					</section>
-
-					<section>
-						<h2>Named Parameters</h2>
-					</section>
-
-					<section>
-						<h3>jQuery <code>options</code>-like behaviour</h3>
-						<pre><code class="hljs" data-trim contenteditable>
-// ES5
-function initializeCanvas(options) {
-	var height = options.height || 600;
-	var width = options.width || 400;
-	var lineStroke = options.lineStroke || 'black';
-}
-
-// ES6
-function initializeCanvas({ height=600, width=400}) {
-	// Use variables height, width here
-}
-						</code></pre>
-					</section>
-
-					<section>
-						<h2>Rest parameters</h2>
-					</section>
-
-					<section>
-						<h3>Rest operator gives us a real array! <img src="img/stars.png" style="box-shadow: none; position: relative; top: 25px;" height="50px"></h3>
-						<pre><code class="hljs" data-trim contenteditable>
-// ES5
-function logArguments() {
-  for (var i=0; i < arguments.length; i++) {
-    console.log(arguments[i]);
-  }
-}
-
-// ES6
-function logArguments(...args) {
-  for (let arg of args) {
-    console.log(arg);
-  }
-}
-						</code></pre>
-					</section>
-				</section>
-
-				<section>
-					<section>
 						<h2>Destructuring Assignment</h2>
 						<img src="img/fish_cake.png" style="box-shadow: none;" height="50px">
 						<img src="img/fish_cake.png" style="box-shadow: none;" height="50px">
@@ -425,14 +357,81 @@ function f() {
   return [1, 2, 3];
 }
 
-var [a, , b] = f();
+var [a, , c] = f();
 console.log(a); // 1
-console.log(b); // 3
+console.log(c); // 3
 						</code></pre>
 					</section>
 				</section>
 			</section>
 
+			<section>
+				<section>
+					<h2>Default parameters</h2>
+					<img src="img/stars.png" style="box-shadow: none;" height="100px">
+				</section>
+
+				<section>
+					<h3>Handling <code>undefined</code> variables</h3>
+					<pre><code class="hljs" data-trim contenteditable>
+// ES5
+function addTwoNumbers(x, y) {
+	x = x || 0;
+	y = y || 0;
+	return x + y;
+}
+
+// ES6
+function addTwoNumbers(x=0, y=0) {
+  return x + y;
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Named Parameters</h2>
+				</section>
+
+				<section>
+					<h3>jQuery <code>options</code>-like behaviour</h3>
+					<pre><code class="hljs" data-trim contenteditable>
+// ES5
+function initializeCanvas(options) {
+	var height = options.height || 600;
+	var width = options.width || 400;
+	var lineStroke = options.lineStroke || 'black';
+}
+
+// ES6
+function initializeCanvas({ height=600, width=400}) {
+	// Use variables height, width here
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Rest parameters</h2>
+				</section>
+
+				<section>
+					<h3 class="fragment">Spread operator gives us a real array! <img src="img/stars.png" style="box-shadow: none; position: relative; top: 25px;" height="50px"></h3>
+					<pre><code class="hljs" data-trim contenteditable>
+// ES5
+function logArguments() {
+  for (var i=0; i < arguments.length; i++) {
+    console.log(arguments[i]);
+  }
+}
+
+// ES6
+function logArguments(...args) {
+  for (let arg of args) {
+    console.log(arg);
+  }
+}
+					</code></pre>
+				</section>
+			</section>
 
 			<section>
 				<section>
