@@ -443,10 +443,10 @@ function logArguments(...args) {
 					<h3>In the simplest form</h3>
 					<pre><code class="hljs" data-trim contenteditable>
 function* sillyGenerator() {
-yield 1;
-yield 2;
-yield 3;
-yield 4;
+  yield 1;
+  yield 2;
+  yield 3;
+  yield 4;
 }
 
 var generator = sillyGenerator();
@@ -462,10 +462,10 @@ console.log(generator.next()); // { value: undefined, done: true }
 					<h3>Infinite generator</h3>
 					<pre><code class="hljs" data-trim contenteditable>
 function* idMaker(){
-var index = 0;
-while (true) {
-  yield index++;
-}
+  var index = 0;
+  while (true) {
+    yield index++;
+  }
 }
 
 var gen = idMaker();
@@ -480,18 +480,18 @@ console.log(gen.next().value);  // 2
 					<h3>Fibonacci !</h3>
 					<pre><code class="hljs" data-trim contenteditable>
 function* fibonacci(){
-var fn1 = 0;
-var fn2 = 1;
-while (true){
-  var current = fn1;
-  fn1 = fn2;
-  fn2 = current + fn1;
-  var reset = yield current;
-  if (reset){
-    fn1 = 0;
-    fn2 = 1;
+  var fn1 = 0;
+  var fn2 = 1;
+  while (true){
+    var current = fn1;
+    fn1 = fn2;
+    fn2 = current + fn1;
+    var reset = yield current;
+    if (reset){
+      fn1 = 0;
+      fn2 = 1;
+    }
   }
-}
 }
 
 var sequence = fibonacci();
@@ -513,14 +513,14 @@ console.log(sequence.next().value);  // 2
 					<h3>Fibonacci with destructuring</h3>
 					<pre><code class="hljs" data-trim contenteditable>
 function* fibonacci() {
-let [prev, curr] = [0, 1];
-while (true) {
-  [prev, curr] = [curr, prev + curr];
-  yield curr;
-  let reset = yield current;
-  if (reset) {
-    [prev, curr] = [0, 1];
-}
+  let [prev, curr] = [0, 1];
+  while (true) {
+    [prev, curr] = [curr, prev + curr];
+    yield curr;
+    let reset = yield current;
+    if (reset) {
+      [prev, curr] = [0, 1];
+  }
 }
 					</code></pre>
 				</section>
@@ -538,11 +538,11 @@ console.log(first10);
 						</p>
 						<pre><code class="hljs" data-trim contenteditable>
 for (let n of fibonacci()) {
-console.log(n);
-// truncate the sequence at 1000
-if (n >= 1000) {
-	break;
-}
+  console.log(n);
+  // truncate the sequence at 1000
+  if (n >= 1000) {
+  	break;
+  }
 }
 						</code></pre>
 					</div>
@@ -551,11 +551,11 @@ if (n >= 1000) {
 				<section>
 					<h3>Koa middleware</h3>
 					<pre><code class="hljs" data-trim contenteditable>
-app.use(function *(next){
-var start = new Date;
-yield next;
-var ms = new Date - start;
-this.set('X-Response-Time', ms + 'ms');
+app.use(function *(next) {
+  var start = new Date;
+  yield next;
+  var ms = new Date - start;
+  this.set('X-Response-Time', ms + 'ms');
 });
 					</code></pre>
 				</section>
