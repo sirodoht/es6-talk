@@ -516,36 +516,43 @@ function* fibonacci() {
   let [prev, curr] = [0, 1];
   while (true) {
     [prev, curr] = [curr, prev + curr];
-    yield curr;
-    let reset = yield current;
+    let reset = yield curr;
     if (reset) {
       [prev, curr] = [0, 1];
+    }
   }
 }
 					</code></pre>
 				</section>
 				<section>
-					<h3>Fibonacci with destructuring - usage</h3>
-					<p>with spread operator</p>
-					<pre><code class="hljs" data-trim contenteditable>
-let [...first10] = fibonacci(10);
-console.log(first10);
-// [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
-					</code></pre>
-					<div class="fragment">
-						<p>
-							OR with <code>for...of</code>
-						</p>
-						<pre><code class="hljs" data-trim contenteditable>
+					<h3>Fibonacci with destructuring - usage with <code>for...of</code></h3>
+          <pre><code class="hljs" data-trim contenteditable>
 for (let n of fibonacci()) {
   console.log(n);
   // truncate the sequence at 1000
   if (n >= 1000) {
-  	break;
+    break;
   }
 }
-						</code></pre>
-					</div>
+          </code></pre>
+				</section>
+
+				<section>
+					<h3>Spread operator can also run a generator</h3>
+					<pre><code class="hljs" data-trim contenteditable>
+function* fibonacci(n) {
+  const infinite = !n && n !== 0;
+  let current = 0;
+  let next = 1;
+  while (infinite || n--) {
+    yield current;
+    [current, next] = [next, current + next];
+  }
+}
+let [...first10] = fibonacci(10);
+console.log(first10);
+// [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+					</code></pre>
 				</section>
 
 				<section>
